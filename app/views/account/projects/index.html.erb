@@ -1,0 +1,26 @@
+<%= render 'navbar', project: @project %>
+
+<center><h2><%= link_to '>>>CREATE NEW PROJECT<<<', new_account_project_path %></h2></center>
+
+
+<div class="projects"
+  <% @projects.each do |project| %>
+
+  <div class="card">
+    <header class="card-header">
+      <%= link_to project.name , account_project_path(project.id), class: 'card-header-title'%>
+
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <%= "#{project.description}"  %>
+    </div>
+  </div>
+  <footer class="card-footer">
+
+    <%= link_to "Edit" ,edit_account_project_path(id: project.id), class: 'card-footer-item'%>
+    <%= link_to "Delete", account_project_path(id: project.id), :method => :delete, class: 'card-footer-item', :confirm => "Are you sure ?"%>
+  </footer>
+  </div>
+  <%end%>
+</div>

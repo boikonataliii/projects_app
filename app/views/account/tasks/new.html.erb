@@ -1,0 +1,5 @@
+<%= form_for [:account, :project, @task] do |form| %>
+  <%= form.label :text %>
+  <%= form.text_field :text, class: 'input is-primary' %>
+  <%= form.submit class: 'btn btn-success' %>
+<% end %>

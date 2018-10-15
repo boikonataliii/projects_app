@@ -1,0 +1,9 @@
+<div class="control">
+  <%= form_for [:account, @project] do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'input is-primary' %>
+    <%= form.label :description %>
+    <%= form.text_field :description, class: 'input is-primary' %>
+    <%= form.submit class: 'btn btn-success' %>
+  <% end %>
+</div>

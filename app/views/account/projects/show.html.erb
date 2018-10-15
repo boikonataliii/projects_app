@@ -1,0 +1,8 @@
+<%= render 'navbar', project: @project %>
+
+<center><h2><%= link_to '>>>CREATE NEW TASK<<<', new_account_project_task_path(@project.id) %></h2></center>
+
+<% @project.tasks.each do |task|%>
+  <%= form.check_box :comlpite%>
+  <%= "#{project.description}"%>
+<%end%>
